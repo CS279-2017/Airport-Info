@@ -23,34 +23,33 @@ const onButtonPress = () => {
 export default class AwesomeProject2 extends Component {
   render() {
     return (
-	<View style={styles.container}>
-      <Image 
-        style={styles.backgroundImage} 
-        source={{uri: 'https://i1.wallpaperscraft.com/image/plane_sky_flying_sunset_64663_225x300.jpg'}}>
+		<View style={styles.container}>
+			<Image style={styles.backgroundImage} 
+				source={{uri: 'https://i1.wallpaperscraft.com/image/plane_sky_flying_sunset_64663_225x300.jpg'}}>
 		
-        <Text style={styles.welcome}>
-			Welcome to TL;VR!
-		</Text>
+				<Text style={styles.welcome}>
+					Welcome to TL;VR!
+				</Text>
 
-		<Text style={styles.instructions}>
-			To start your customized experience, click "get started" below
-		</Text>
+				<Text style={styles.instructions}>
+					To start your customized experience, click "get started" below
+				</Text>
 	
-      </Image>
+			</Image>
 		
 		
-		<View style={styles.container2}>
-           <View style={styles.box3}>
-				<Button
-					onPress={onButtonPress}
-					title="Get started"
-					color="#42f44e"
-					accessibilityLabel="Learn more about this purple button"
-					alignSelf="stretch"
-				/>
+			<View style={styles.container2}>
+				<View style={styles.box3}>
+					<Button
+						onPress={onButtonPress}
+						title="Get started"
+						color="#42f44e"
+						accessibilityLabel="Learn more about this purple button"
+						alignSelf="stretch"
+					/>
+				</View>
 			</View>
-        </View>
-    </View>
+		</View>
     );
   }
 }
