@@ -12,14 +12,18 @@ import {
   View,
   Image,
   Button,
-  Footer,
+  Navigator,
   Alert
 } from 'react-native';
 
-const onButtonPress = () => {
-  Alert.alert('Button has been pressed!');
-};
+import page2 from './p2';
 
+
+const onButtonPress = () => {
+	Alert.alert('Button has been pressed!');
+}
+			
+};
 export default class AwesomeProject2 extends Component {
   render() {
     return (
@@ -53,6 +57,8 @@ export default class AwesomeProject2 extends Component {
     );
   }
 }
+
+
 
 
 const styles = StyleSheet.create({
