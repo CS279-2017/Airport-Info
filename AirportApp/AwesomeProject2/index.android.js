@@ -16,8 +16,6 @@ import {
   Alert
 } from 'react-native';
 
-import page2 from './p2';
-
 
 const onButtonPress = () => {
 	Alert.alert('Button has been pressed!');
