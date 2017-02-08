@@ -21,13 +21,12 @@ const onButtonPress = () => {
 	Alert.alert('Button has been pressed!');
 }
 			
-};
 export default class AwesomeProject2 extends Component {
   render() {
     return (
 		<View style={styles.container}>
 			<Image style={styles.backgroundImage} 
-				source={{uri: 'https://i1.wallpaperscraft.com/image/plane_sky_flying_sunset_64663_225x300.jpg'}}>
+				source={{uri:'http://adventuresinrussia.com/wp-content/uploads/2016/09/airport-transfer-car-driver.jpg' }}>
 		
 				<Text style={styles.welcome}>
 					Welcome to TL;VR!
@@ -74,14 +73,15 @@ const styles = StyleSheet.create({
     fontSize: 34,
     textAlign: 'center',
     margin: 10,
-	color: 'white',
+	color: '#207c76',
 	fontWeight: 'bold'
   },
   instructions: {
-    fontSize: 16,
-    textAlign: 'left',
-    margin: 10,
-	color: 'white'
+	fontSize: 16,
+    	textAlign: 'left',
+    	margin: 10,
+	marginTop: 90,
+	color: '#207c76'
   },
   container: {
     flex: .5,
