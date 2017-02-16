@@ -2,13 +2,14 @@
 
 # TRVLR
 
-Schedule:
+Schedule:  
 _StandUp Meetings: Wednesdays, 3:40_  
 * Demo 1: Feb. 13  
-* Demo 2: Mar. 1
-Proposed Sprint 2 Plans:
-Blake: Build out fully navigable customization process.  
-Caelan: Investigate and build out account/login system. Build home screen that is reached upon successful login.  
+* Demo 2: Mar. 1  
+
+_Proposed Sprint 2 Plans:_  
+*Blake: Build out fully navigable customization process.  
+*Caelan: Investigate and build out account/login system. Build home screen that is reached upon successful login.  
 
 
 
