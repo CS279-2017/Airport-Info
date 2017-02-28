@@ -17,7 +17,11 @@ import {
     AppRegistry,
     StyleSheet,
     Text,
-    View,ScrollView,
+    View,
+    ScrollView,
+    ListView,
+    Button,
+    Alert
 } from 'react-native';
 
 
@@ -26,14 +30,20 @@ import { Form,
     SwitchField, PickerField,DatePickerField,TimePickerField
 } from 'react-native-form-generator';
 
+const onButtonPress = () => {
+    Alert.alert('Button has been pressed!');
+}
+
+
 export default class TRVLR extends Component{
+
+
 
     render() {
         return (
-            <ScrollView keyboardShouldPersistTaps="always" style={{paddingLeft:10,paddingRight:10, height:200}}>
-
+            <View style={styles.container}>
                 <Text style={styles.welcome}>
-                    Tell us a little about yourself..
+                    Airport info
                 </Text>
 
                 <Form
@@ -41,28 +51,6 @@ export default class TRVLR extends Component{
                     //onFocus={this.handleFormFocus.bind(this)}
                     //onChange={this.handleFormChange.bind(this)}
                     label="Personal Information">
-
-
-
-                    <Separator />
-
-                    <InputField
-                        ref='first_name'
-                        label='First Name'
-                        placeholder='First Name'
-                    />
-
-                    <InputField
-                        ref='last_name'
-                        label = 'Last Name'
-                        placeholder='Last Name'
-                    />
-
-                    <InputField
-                        ref='email'
-                        label='Email'
-                        placeholder='Email'
-                    />
 
                     <PickerField ref='Home Airport'
                                  label='Home Airport'
@@ -77,29 +65,25 @@ export default class TRVLR extends Component{
                                  }}/>
 
 
-
-                    <Separator />
-
-
-                    <SwitchField label='I accept Terms & Conditions'
-                                 ref="has_accepted_conditions"
-                                 helpText='Please read carefully the terms & conditions'
+                    <InputField
+                        ref='TSA'
+                        label='TSA #'
+                        textColor = 'white'
+                        placeholder='TSA #'
                     />
-
 
                 </Form>
 
 
-            </ScrollView>);
 
-        <Button
-            onPress={onButtonPress=Alert.alert('Button has been pressed!')}
-            title="Login"
-            color="white"
+                <Button
+                    onPress={onButtonPress}
+                    title="Next"
+                    color="black"
+                    accessibilityLabel=""
+                />
 
-            accessibilityLabel=""
-        />
-
+            </View>);
     }
 
 }
@@ -117,11 +101,10 @@ const styles = StyleSheet.create({
         color: '#207c76',
         fontWeight: 'bold'
     },
-
     container: {
         flex: .5,
         flexDirection: 'column',
-        justifyContent: 'center', //replace with flex-end or center
+        justifyContent: 'space-between', //replace with flex-end or center
         borderBottomWidth: 1,
         borderBottomColor: '#000'
     }
