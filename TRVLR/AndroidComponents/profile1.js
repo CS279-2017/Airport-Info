@@ -1,13 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-/*
- This is a view i use in a test app,
- very useful to list all the use cases
- */
-
 import React, { Component } from 'react';
 
 import {
@@ -46,7 +36,6 @@ export default class TRVLR extends Component{
                     //onChange={this.handleFormChange.bind(this)}
                     label="Personal Information">
 
-                    <Separator />
 
                     <InputField
                         ref='first_name'
@@ -105,8 +94,9 @@ const styles = StyleSheet.create({
     },
 
     container: {
-        flex: 1,
+        flex: .5,
         flexDirection: 'column',
+        justifyContent: 'space-between', //replace with flex-end or center
         borderBottomWidth: 10
     }
 });
