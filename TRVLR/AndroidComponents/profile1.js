@@ -96,13 +96,9 @@ const styles = StyleSheet.create({
     container: {
         flex: .5,
         flexDirection: 'column',
-<<<<<<< HEAD
         justifyContent: 'space-between', //replace with flex-end or center
-        borderBottomWidth: 10
-=======
         borderBottomWidth: 10,
         justifyContent: 'space-between'
->>>>>>> fecdb8ef8c3e57f1c3bc86d18eb8bbd0b8cb9aea
     }
 });
 
