@@ -3,23 +3,19 @@
  * https://github.com/facebook/react-native
  * @flow
  */
+/*
+ This is a view i use in a test app,
+ very useful to list all the use cases
+ */
 
 import React, { Component } from 'react';
+
 import {
     AppRegistry,
     StyleSheet,
     Text,
-    View,
-    Image,
-    Button,
-    Navigator,
-    Alert
+    View,ScrollView,
 } from 'react-native';
-
-
-const onButtonPress = () => {
-    Alert.alert('Button has been pressed!');
-}
 
 
 import { Form,
@@ -27,44 +23,75 @@ import { Form,
     SwitchField, PickerField,DatePickerField,TimePickerField
 } from 'react-native-form-generator';
 
-export default class TRVLR extends Component {
+export default class TRVLR extends Component{
+
     render() {
         return (
-            <View style={styles.container}>
+            <ScrollView keyboardShouldPersistTaps="always" style={{paddingLeft:10,paddingRight:10, height:200}}>
 
                 <Text style={styles.welcome}>
                     Tell us a little about yourself..
                 </Text>
 
+                <Form
+                    ref='registrationForm'
+                    //onFocus={this.handleFormFocus.bind(this)}
+                    //onChange={this.handleFormChange.bind(this)}
+                    label="Personal Information">
 
-                <View style={styles.container}>
-                    <Form
-                        ref='registrationForm'
-                        label="Personal Information">
-                        <InputField
-                            ref='first_name'
-                            label='First Name'
-                            placeholder='First Name'/>
 
-                        <InputField
-                            ref='last_name'
-                            placeholder='Last Name'/>
-                    </Form>
 
-                </View>
+                    <Separator />
 
-                <Button
-                    onPress = {onButtonPress}
-                    title = "Next"
-                    color = "#42f44e"
-                    alignItems = "baseline"
+                    <InputField
+                        ref='first_name'
+                        label='First Name'
+                        placeholder='First Name'
+                    />
 
-                />
+                    <InputField
+                        ref='last_name'
+                        label = 'Last Name'
+                        placeholder='Last Name'
+                    />
 
-            </View>
-        );
+                    <InputField
+                        ref='email'
+                        label='Email'
+                        placeholder='Email'
+                    />
+
+                    <PickerField ref='Home Airport'
+                                 label='Home Airport'
+                                 options={{
+                                     "": '',
+                                     austin: 'AUS',
+                                     nashville: 'BNA',
+                                     dallas: 'DFW',
+                                     chicago: 'ORD',
+                                     los_angeles: 'LAX',
+                                     //look at www.world-airport-codes.com
+                                 }}/>
+
+
+
+                    <Separator />
+
+
+                    <SwitchField label='I accept Terms & Conditions'
+                                 ref="has_accepted_conditions"
+                                 helpText='Please read carefully the terms & conditions'
+                    />
+
+
+                </Form>
+
+
+            </ScrollView>);
     }
+
 }
+
 
 const styles = StyleSheet.create({
     backgroundImage: {
