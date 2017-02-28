@@ -35,8 +35,7 @@ const onButtonPress = () => {
 }
 
 
-export default class TRVLR extends Component{
-
+export default class profile2 extends Component{
 
 
     render() {
@@ -110,4 +109,4 @@ const styles = StyleSheet.create({
     }
 });
 
-AppRegistry.registerComponent('TRVLR', () => TRVLR);
+AppRegistry.registerComponent('Profile2', () => profile2);

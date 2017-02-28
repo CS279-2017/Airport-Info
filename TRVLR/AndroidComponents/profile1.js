@@ -18,7 +18,7 @@ const onButtonPress = () => {
     Alert.alert('Button has been pressed!');
 }
 
-export default class TRVLR extends Component{
+export default class profile1 extends Component{
 
     render() {
         return (
@@ -102,4 +102,4 @@ const styles = StyleSheet.create({
     }
 });
 
-AppRegistry.registerComponent('TRVLR', () => TRVLR);
+AppRegistry.registerComponent('Profile1', () => profile1);

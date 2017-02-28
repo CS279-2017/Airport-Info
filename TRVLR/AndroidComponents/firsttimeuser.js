@@ -19,9 +19,10 @@ import {
 
 const onButtonPress = () => {
 	Alert.alert('Button has been pressed!');
+    this.props.onForward;
 }
 
-export default class AwesomeProject2 extends Component {
+export default class firsttimeuser extends Component {
   render() {
     return (
 		<View style={styles.container}>
@@ -92,4 +93,4 @@ const styles = StyleSheet.create({
   }
 });
 
-AppRegistry.registerComponent('TRVLR', () => TRVLR);
+AppRegistry.registerComponent('FirstTimeUser', () => firsttimeuser);
