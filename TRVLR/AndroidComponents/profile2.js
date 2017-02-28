@@ -1,4 +1,7 @@
 /**
+ * Created by Blake on 2/28/2017.
+ */
+/**
  * Sample React Native App
  * https://github.com/facebook/react-native
  * @flow
@@ -14,7 +17,7 @@ import {
     AppRegistry,
     StyleSheet,
     Text,
-    View,ScrollView, Button, Alert
+    View,ScrollView,
 } from 'react-native';
 
 
@@ -23,22 +26,15 @@ import { Form,
     SwitchField, PickerField,DatePickerField,TimePickerField
 } from 'react-native-form-generator';
 
-
-const onButtonPress = () => {
-    Alert.alert('Button has been pressed!');
-}
-
 export default class TRVLR extends Component{
 
     render() {
         return (
-            <View style={styles.container}>
+            <ScrollView keyboardShouldPersistTaps="always" style={{paddingLeft:10,paddingRight:10, height:200}}>
 
-                <View>
-                    <Text style={styles.welcome}>
-                        Tell us a little about yourself..
-                    </Text>
-                </View>
+                <Text style={styles.welcome}>
+                    Tell us a little about yourself..
+                </Text>
 
                 <Form
                     ref='registrationForm'
@@ -46,48 +42,63 @@ export default class TRVLR extends Component{
                     //onChange={this.handleFormChange.bind(this)}
                     label="Personal Information">
 
+
+
                     <Separator />
 
                     <InputField
                         ref='first_name'
                         label='First Name'
-                        textColor = 'white'
                         placeholder='First Name'
                     />
 
                     <InputField
                         ref='last_name'
                         label = 'Last Name'
-                        labelColor = 'white'
                         placeholder='Last Name'
-
                     />
 
                     <InputField
                         ref='email'
                         label='Email'
-                        textColor = 'white'
                         placeholder='Email'
                     />
 
+                    <PickerField ref='Home Airport'
+                                 label='Home Airport'
+                                 options={{
+                                     "": '',
+                                     austin: 'AUS',
+                                     nashville: 'BNA',
+                                     dallas: 'DFW',
+                                     chicago: 'ORD',
+                                     los_angeles: 'LAX',
+                                     //look at www.world-airport-codes.com
+                                 }}/>
+
+
+
                     <Separator />
+
 
                     <SwitchField label='I accept Terms & Conditions'
                                  ref="has_accepted_conditions"
                                  helpText='Please read carefully the terms & conditions'
                     />
+
+
                 </Form>
 
 
+            </ScrollView>);
 
-                <Button
-                    onPress={onButtonPress}
-                    title="Next"
-                    color="black"
-                    accessibilityLabel=""
-                />
+        <Button
+            onPress={onButtonPress=Alert.alert('Button has been pressed!')}
+            title="Login"
+            color="white"
 
-            </View>);
+            accessibilityLabel=""
+        />
 
     }
 
@@ -95,19 +106,24 @@ export default class TRVLR extends Component{
 
 
 const styles = StyleSheet.create({
-
+    backgroundImage: {
+        flex: 1,
+        resizeMode: 'cover', // or 'stretch'
+    },
     welcome: {
-        fontSize: 20,
+        fontSize: 24,
         textAlign: 'center',
-        margin: 5,
+        margin: 10,
         color: '#207c76',
         fontWeight: 'bold'
     },
 
     container: {
-        flex: 1,
+        flex: .5,
         flexDirection: 'column',
-        borderBottomWidth: 10
+        justifyContent: 'center', //replace with flex-end or center
+        borderBottomWidth: 1,
+        borderBottomColor: '#000'
     }
 });
 
