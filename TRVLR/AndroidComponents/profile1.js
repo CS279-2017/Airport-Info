@@ -16,6 +16,7 @@ import { Form,
 
 const onButtonPress = () => {
     Alert.alert('Button has been pressed!');
+    // this is where navigator pulls next scene... profile2
 }
 
 export default class profile1 extends Component{

@@ -32,6 +32,7 @@ import { Form,
 
 const onButtonPress = () => {
     Alert.alert('Button has been pressed!');
+    //
 }
 
 

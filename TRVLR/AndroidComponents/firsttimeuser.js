@@ -19,7 +19,7 @@ import {
 
 const onButtonPress = () => {
 	Alert.alert('Button has been pressed!');
-    this.props.onForward;
+	//navigator sends user to profile1
 }
 
 export default class firsttimeuser extends Component {
