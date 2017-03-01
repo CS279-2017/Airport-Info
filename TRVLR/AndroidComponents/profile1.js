@@ -18,14 +18,16 @@ import { Form,
 } from 'react-native-form-generator';
 
 
-import profile2 from './profile2.js';
+//import profile2 from './profile2.js';
 
 const onButtonPress = () => {
-    this.props.navigator.push({
-        title: "profile2",
-        component: profile2
-    });
+    //this.props.navigator.push({
+    //    title: "profile2",
+    //    component: profile2
+    //});
+
     //navigator sends user to profile1
+    Alert.alert("Button Pressed");
 }
 
 export default class profile1 extends Component{
@@ -40,12 +42,13 @@ export default class profile1 extends Component{
                     </Text>
                 </View>
 
+                <View style={styles.formContainer}>
+
                 <Form
                     ref='registrationForm'
                     //onFocus={this.handleFormFocus.bind(this)}
                     //onChange={this.handleFormChange.bind(this)}
                     label="Personal Information">
-
 
                     <InputField
                         ref='first_name'
@@ -69,15 +72,14 @@ export default class profile1 extends Component{
                         placeholder='Email'
                     />
 
-                    <Separator />
-
                     <SwitchField label='I accept Terms & Conditions'
                                  ref="has_accepted_conditions"
                                  helpText='Please read carefully the terms & conditions'
                     />
+
                 </Form>
 
-
+                </View>
 
                 <Button
                     onPress={onButtonPress}
@@ -98,20 +100,32 @@ export default class profile1 extends Component{
 const styles = StyleSheet.create({
 
     welcome: {
-        fontSize: 20,
+        fontSize: 25,
         textAlign: 'center',
-        margin: 5,
-        color: '#207c76',
+        margin: 10,
+        color: 'white',
         fontWeight: 'bold'
     },
 
     container: {
-        flex: .5,
+        flex: 1,
         flexDirection: 'column',
         justifyContent: 'space-between', //replace with flex-end or center
         borderBottomWidth: 10,
-        justifyContent: 'space-between'
+        backgroundColor :'#333333',
+
+    },
+
+    formContainer:{
+        flex:1,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        backgroundColor: 'white',
+        paddingBottom: 100,
+        paddingTop: 0
     }
+
 });
 
-AppRegistry.registerComponent('Profile1', () => profile1);
+AppRegistry.registerComponent('profile1', () => profile1);
+
