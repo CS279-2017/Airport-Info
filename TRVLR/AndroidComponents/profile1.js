@@ -4,7 +4,11 @@ import {
     AppRegistry,
     StyleSheet,
     Text,
-    View,ScrollView, Button, Alert
+    View,
+    ScrollView,
+    Button,
+    Alert,
+    Navigator
 } from 'react-native';
 
 
