@@ -3,6 +3,11 @@
  */
 
 
+/**
+ * Created by Blake on 2/28/2017.
+ */
+
+
 import React, { Component } from 'react';
 
 import {
@@ -27,7 +32,7 @@ const onButtonPress = () => {
 }
 
 
-export default class profile2 extends Component{
+export default class Profile2 extends Component{
 
 
     render() {
@@ -36,6 +41,8 @@ export default class profile2 extends Component{
                 <Text style={styles.welcome}>
                     Airport info
                 </Text>
+
+                <View style={styles.formContainer}>
 
                 <Form
                     ref='registrationForm'
@@ -55,15 +62,41 @@ export default class profile2 extends Component{
                                      //look at www.world-airport-codes.com
                                  }}/>
 
+                    <PickerField ref='Airport 2'
+                                 label='Airport 2'
+                                 options={{
+                                     "": '',
+                                     austin: 'AUS',
+                                     nashville: 'BNA',
+                                     dallas: 'DFW',
+                                     chicago: 'ORD',
+                                     los_angeles: 'LAX',
+                                     //look at www.world-airport-codes.com
+                                 }}/>
+
+                    <PickerField ref='Airport 3'
+                                 label='Airport 3'
+                                 options={{
+                                     "": '',
+                                     austin: 'AUS',
+                                     nashville: 'BNA',
+                                     dallas: 'DFW',
+                                     chicago: 'ORD',
+                                     los_angeles: 'LAX',
+                                     //look at www.world-airport-codes.com
+                                 }}/>
+
 
                     <InputField
                         ref='TSA'
                         label='TSA #'
-                        textColor = 'white'
+                        textColor = 'black'
                         placeholder='TSA #'
                     />
 
                 </Form>
+                </View>
+
 
 
 
@@ -89,7 +122,7 @@ const styles = StyleSheet.create({
         fontSize: 24,
         textAlign: 'center',
         margin: 10,
-        color: '#207c76',
+        color: 'white',
         fontWeight: 'bold'
     },
     container: {
@@ -97,8 +130,22 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'space-between', //replace with flex-end or center
         borderBottomWidth: 1,
-        borderBottomColor: '#000'
+        borderBottomColor: '#000',
+        backgroundColor: '#333333'
+    },
+    formContainer:{
+        flex:1,
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        backgroundColor: 'white',
+        paddingBottom: 0,
+        borderTopWidth: 50,
+        borderBottomWidth: 180,
+        borderBottomColor: '#333333',
+        borderTopColor: '#333333',
+        paddingTop: 0
     }
+
 });
 
-AppRegistry.registerComponent('Profile2', () => profile2);
+AppRegistry.registerComponent('Profile2', () => Profile2);
