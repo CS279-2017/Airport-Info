@@ -1,8 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+
 
 import React, { Component } from 'react';
 import {
@@ -16,102 +12,90 @@ import {
     Alert
 } from 'react-native';
 
-
 const onButtonPress = () => {
-    Alert.alert('Button has been pressed!');
+    // this.props.navigator.push({
+    //    title: "profile1",
+    //   component: profile1
+    Alert.alert("Button Pressed")
 }
 
-export default class firsttimeuser extends Component {
+
+
+export default class TRVLR extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Image style={styles.backgroundImage}
-                       source={require('./Unknown.png')}>
 
-                    <Text style={styles.welcome}>
-                        Welcome to <Text style={styles.appName}>
-                        TRVLR
-                    </Text>
-                    </Text>
+                <Text style={styles.welcome}>
+                    Welcome to TRVLR!
+                </Text>
 
+                <View style = {{
+                    flex: 1,
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                    backgroundColor: '#333333',
+                    alignItems: 'center',
+                    paddingBottom: 400,
+                    paddingTop: 50 }}>
 
-
+                    <Image
+                        source ={{uri: 'https://cloud.githubusercontent.com/assets/21345486/22996276/dd8cae7c-f393-11e6-9987-eecc352d985e.png'}}
+                        style={{width: 200, height: 200}}/>
 
                     <Text style={styles.instructions}>
-                        To start your customized experience, click "Get Started" below
+                        To start your customized experience, click "get started" below
                     </Text>
 
-                </Image>
-
-
-                <View style={styles.container2}>
-                    <View style={styles.box3}>
-                        <Button
-                            onPress={onButtonPress}
-                            title="Get Started"
-                            color="cornflowerblue"
-                            accessibilityLabel="Learn more about this purple button"
-                            alignSelf="stretch"
-                        />
-                    </View>
                 </View>
+
+
+
+
+                <Button
+                    onPress={onButtonPress}
+                    title="Get started"
+                    color="#42f44e"
+                    alignSelf="fill" />
             </View>
         );
     }
-}
 
+
+}
 
 
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'transparent'
-    },
-    backgroundImage: {
-
-        width: 400,
-        height: 620
+        paddingTop: 0,
+        backgroundColor: '#333333',
     },
     welcome: {
-        fontFamily: "Hiragino Mincho ProN",
         fontSize: 34,
         textAlign: 'center',
-        margin: 20,
-
-        color: 'black',
-
-
-
-        backgroundColor: 'transparent'
-    },
-    appName: {
-        fontFamily: "Futura",
-        fontSize: 34,
-
-        backgroundColor: 'transparent'
-
+        margin: 10,
+        color: 'white',
+        fontWeight: 'bold'
     },
     instructions: {
-
-        fontSize: 15,
-        fontFamily: "Hiragino Mincho ProN",
-        textAlign: 'center',
-        fontWeight: 'bold',
-        paddingRight: 15,
-
-        marginTop: 150,
-        color: 'black',
-        backgroundColor: 'transparent'
+        fontSize: 14,
+        textAlign: 'left',
+        margin: 10,
+        marginLeft: 20,
+        marginRight: 20,
+        marginTop: 300,
+        color: 'white'
     },
-    container: {
-        flex: .5,
-        flexDirection: 'column',
-        justifyContent: 'center', //replace with flex-end or center
-        borderBottomWidth: 1,
-        borderBottomColor: 'transparent'
+    image: {
+        flex: 1,
+        width: null,
+        height: null,
+        resizeMode: 'contain'
     }
 });
 
