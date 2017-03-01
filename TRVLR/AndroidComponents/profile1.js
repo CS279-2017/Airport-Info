@@ -14,8 +14,15 @@ import { Form,
 } from 'react-native-form-generator';
 
 
-import profile2 from './profile2.js'
+import profile2 from './profile2.js';
 
+const onButtonPress = () => {
+    this.props.navigator.push({
+        title: "profile2",
+        component: profile2
+    });
+    //navigator sends user to profile1
+}
 
 export default class profile1 extends Component{
 
@@ -69,7 +76,7 @@ export default class profile1 extends Component{
 
 
                 <Button
-                    onPress={this.onButtonPressB()}
+                    onPress={onButtonPress}
                     title="Next"
                     color="black"
                     accessibilityLabel=""
@@ -79,14 +86,7 @@ export default class profile1 extends Component{
 
     }
 
-    onButtonPressB = () => {
-        Alert.alert('Button has been pressed!');
-        this.props.navigator.push({
-            title: "profile2",
-            component: profile2
-        });
-        //navigator sends user to profile1
-    }
+
 
 }
 

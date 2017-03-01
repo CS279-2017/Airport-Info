@@ -1,15 +1,7 @@
 /**
  * Created by Blake on 2/28/2017.
  */
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-/*
- This is a view i use in a test app,
- very useful to list all the use cases
- */
+
 
 import React, { Component } from 'react';
 
@@ -31,8 +23,7 @@ import { Form,
 } from 'react-native-form-generator';
 
 const onButtonPress = () => {
-    Alert.alert('Button has been pressed!');
-    //
+    Alert.alert("NEW USER CREATED");
 }
 
 

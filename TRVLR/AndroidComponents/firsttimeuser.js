@@ -16,7 +16,14 @@ import {
   Alert
 } from 'react-native';
 
-import profile1 from './profile1.js'
+import profile1 from './profile1.js';
+
+const onButtonPress = () => {
+    this.props.navigator.push({
+        title: "profile1",
+        component: profile1
+    });
+}
 
 
 export default class firsttimeuser extends Component {
@@ -40,7 +47,7 @@ export default class firsttimeuser extends Component {
 			<View style={styles.container2}>
 				<View style={styles.box3}>
 					<Button
-						onPress={this.onButtonPressA()}
+						onPress={onButtonPress}
 						title="Get started"
 						color="#42f44e"
 						accessibilityLabel="Learn more about this purple button"
@@ -52,14 +59,7 @@ export default class firsttimeuser extends Component {
     );
   }
 
-    onButtonPressA = () => {
-        Alert.alert('Button has been pressed!');
-        this.props.navigator.push({
-            title: "profile1",
-            component: profile1
-        });
-        //navigator sends user to profile1
-    }
+
 }
 
 

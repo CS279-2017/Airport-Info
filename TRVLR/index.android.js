@@ -1,10 +1,24 @@
 import React, { Component } from 'react';
-import { AppRegistry, Navigator, StyleSheet } from 'react-native';
+import { AppRegistry, NavigationExperimental, StyleSheet } from 'react-native';
 
 import firsttimeuser from './AndroidComponents/firsttimeuser';
 
 
 class TRVLR extends Component {
+
+
+    constructor(props, context) {
+        super(props, context)
+        this.state = {
+            navigation: {
+                index: 0,
+                routes: [
+                    {key: 'screen1'},
+                ]
+            }
+        }
+
+    }
 
     renderScene(route, navigator) {
         return <route.component {...route.passProps} navigator={navigator}/>
