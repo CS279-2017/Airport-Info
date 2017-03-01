@@ -104,7 +104,9 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         margin: 10,
         color: 'white',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        borderBottomWidth: 40,
+        borderBottomColor: '#333333',
     },
 
     container: {
@@ -122,7 +124,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: 'white',
         paddingBottom: 100,
-        paddingTop: 0
+        paddingTop: 100,
+        borderTopWidth: 0,
+        borderBottomWidth: 150,
+        borderBottomColor: '#333333',
+        borderTopColor: '#333333'
     }
 
 });
