@@ -27,7 +27,7 @@ export default class firsttimeuser extends Component {
     return (
 		<View style={styles.container}>
 			<Image style={styles.backgroundImage}
-				source={{uri:'http://adventuresinrussia.com/wp-content/uploads/2016/09/airport-transfer-car-driver.jpg' }}>
+				source={require('./Unknown.png')}>
 
 				<Text style={styles.welcome}>
 					Welcome to TL;VR!
