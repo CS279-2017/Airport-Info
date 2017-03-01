@@ -16,18 +16,15 @@ import {
   Alert
 } from 'react-native';
 
+import profile1 from './profile1.js'
 
-const onButtonPress = () => {
-	Alert.alert('Button has been pressed!');
-	//navigator sends user to profile1
-}
 
 export default class firsttimeuser extends Component {
   render() {
     return (
 		<View style={styles.container}>
 			<Image style={styles.backgroundImage}
-				source={require('./Unknown.png')}>
+				source={require('./welcomebackground.png')}>
 
 				<Text style={styles.welcome}>
 					Welcome to TL;VR!
@@ -43,7 +40,7 @@ export default class firsttimeuser extends Component {
 			<View style={styles.container2}>
 				<View style={styles.box3}>
 					<Button
-						onPress={onButtonPress}
+						onPress={this.onButtonPressA()}
 						title="Get started"
 						color="#42f44e"
 						accessibilityLabel="Learn more about this purple button"
@@ -54,6 +51,15 @@ export default class firsttimeuser extends Component {
 		</View>
     );
   }
+
+    onButtonPressA = () => {
+        Alert.alert('Button has been pressed!');
+        this.props.navigator.push({
+            title: "profile1",
+            component: profile1
+        });
+        //navigator sends user to profile1
+    }
 }
 
 
