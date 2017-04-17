@@ -1,57 +1,53 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ * @flow
+ */
+
 import React, { Component } from 'react';
-import { AppRegistry, NavigationExperimental, StyleSheet } from 'react-native';
+import {
+  AppRegistry,
+  StyleSheet,
+  Text,
+  View
+} from 'react-native';
 
-import firsttimeuser from './AndroidComponents/firsttimeuser';
-
-
-class TRVLR extends Component {
-
-
-    constructor(props, context) {
-        super(props, context)
-        this.state = {
-            navigation: {
-                index: 0,
-                routes: [
-                    {key: 'screen1'},
-                ]
-            }
-        }
-
-    }
-
-    renderScene(route, navigator) {
-        return <route.component {...route.passProps} navigator={navigator}/>
-    }
-
-    configureScene (route, routeStack){
-        if(route.type === 'Modal'){
-            return Navigator.SceneConfigs.FloatFromBottom
-        }
-        return Navigator.SceneConfigs.PushFromRight
-    }
-
-    render(){
-        return (
-            <Navigator
-                configureScene={this.configureScene.bind(this)}
-                renderScene={this.renderScene.bind(this)}
-
-                initialRoute={{
-                    component: firsttimeuser,
-                }}/>
-
-        );
-    }
+export default class TRVLR extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.welcome}>
+          Welcome to React Native!
+        </Text>
+        <Text style={styles.instructions}>
+          To get started, edit index.android.js
+        </Text>
+        <Text style={styles.instructions}>
+          Double tap R on your keyboard to reload,{'\n'}
+          Shake or press menu button for dev menu
+        </Text>
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
-    navigationContainer: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF'
-    }
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
+  },
 });
 
 AppRegistry.registerComponent('TRVLR', () => TRVLR);

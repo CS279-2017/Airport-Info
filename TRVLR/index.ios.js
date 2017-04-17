@@ -1,53 +1,38 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+'use strict';
 
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import React, { Component, PropTypes } from 'react';
+import { NavigatorIOS, AppRegistry, StyleSheet} from 'react-native';
 
-export default class TRVLR extends Component {
+import * as firebase from "firebase";
+firebase.initializeApp({
+    apiKey: "AIzaSyAROtkpB8Q264PJ9wl3mK0WE7--OMRX_oc",
+    authDomain: "trvlr-babc2.firebaseapp.com",
+    databaseURL: "https://trvlr-babc2.firebaseio.com",
+    projectId: "trvlr-babc2",
+    storageBucket: "trvlr-babc2.appspot.com",
+    messagingSenderId: "301890234334"
+});
+
+import Login from './home';
+
+class TRVLR extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
+      <NavigatorIOS
+        style = {styles.container}  
+        initialRoute={{
+          title: 'Login',
+          component: Login
+        }}
+        navigationBarHidden={true}/>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+   container: {
+    flex: 2,
+  }
 });
 
-AppRegistry.registerComponent('TRVLR', () => TRVLR);
+AppRegistry.registerComponent('TRVLR', () => TRVLR); 

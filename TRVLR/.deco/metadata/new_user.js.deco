@@ -1,0 +1,248 @@
+{
+	"liveValues": [
+		{
+			"range": {
+				"from": {
+					"line": 32,
+					"ch": 27
+				},
+				"to": {
+					"line": 32,
+					"ch": 46
+				}
+			},
+			"editWith": "colorPicker",
+			"type": "string",
+			"name": "Color",
+			"group": "TEXT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 33,
+					"ch": 30
+				},
+				"to": {
+					"line": 33,
+					"ch": 32
+				}
+			},
+			"type": "number",
+			"name": "FontSize",
+			"group": "TEXT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 34,
+					"ch": 32
+				},
+				"to": {
+					"line": 34,
+					"ch": 40
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "FontWeight",
+			"type": "string",
+			"name": "FontWeight",
+			"group": "TEXT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 35,
+					"ch": 32
+				},
+				"to": {
+					"line": 35,
+					"ch": 40
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "FontFamily",
+			"type": "string",
+			"name": "FontFamily",
+			"group": "TEXT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 42,
+					"ch": 27
+				},
+				"to": {
+					"line": 42,
+					"ch": 46
+				}
+			},
+			"editWith": "colorPicker",
+			"type": "string",
+			"name": "Color",
+			"group": "TEXT 2"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 43,
+					"ch": 30
+				},
+				"to": {
+					"line": 43,
+					"ch": 32
+				}
+			},
+			"type": "number",
+			"name": "FontSize",
+			"group": "TEXT 2"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 44,
+					"ch": 32
+				},
+				"to": {
+					"line": 44,
+					"ch": 37
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "FontWeight",
+			"type": "string",
+			"name": "FontWeight",
+			"group": "TEXT 2"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 45,
+					"ch": 32
+				},
+				"to": {
+					"line": 45,
+					"ch": 39
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "FontFamily",
+			"type": "string",
+			"name": "FontFamily",
+			"group": "TEXT 2"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 52,
+					"ch": 27
+				},
+				"to": {
+					"line": 52,
+					"ch": 46
+				}
+			},
+			"editWith": "colorPicker",
+			"type": "string",
+			"name": "Color",
+			"group": "TEXT 3"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 53,
+					"ch": 30
+				},
+				"to": {
+					"line": 53,
+					"ch": 32
+				}
+			},
+			"type": "number",
+			"name": "FontSize",
+			"group": "TEXT 3"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 54,
+					"ch": 32
+				},
+				"to": {
+					"line": 54,
+					"ch": 40
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "FontWeight",
+			"type": "string",
+			"name": "FontWeight",
+			"group": "TEXT 3"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 55,
+					"ch": 32
+				},
+				"to": {
+					"line": 55,
+					"ch": 40
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "FontFamily",
+			"type": "string",
+			"name": "FontFamily",
+			"group": "TEXT 3"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 65,
+					"ch": 33
+				},
+				"to": {
+					"line": 65,
+					"ch": 35
+				}
+			},
+			"type": "number",
+			"name": "ActiveOpacity",
+			"min": 0,
+			"max": 100,
+			"group": "TOUCHABLE HIGHLIGHT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 66,
+					"ch": 33
+				},
+				"to": {
+					"line": 66,
+					"ch": 50
+				}
+			},
+			"editWith": "colorPicker",
+			"type": "string",
+			"name": "UnderlayColor",
+			"group": "TOUCHABLE HIGHLIGHT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 67,
+					"ch": 41
+				},
+				"to": {
+					"line": 67,
+					"ch": 60
+				}
+			},
+			"editWith": "colorPicker",
+			"type": "string",
+			"name": "Color",
+			"group": "TEXT 3"
+		}
+	]
+}
